@@ -1,3 +1,24 @@
+@font-face {
+  font-family: 'BOLDE Bold';
+  src: url('../fonts/bolde-bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BOLDE Regular';
+  src: url('../fonts/bolde-regular.ttf') format('truetype');
+  /* Assuming this is the file name for the regular version */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+
+
+
+
 /* 1. Global Reset */
 * {
     margin: 0;
@@ -53,6 +74,330 @@
   transform: scale(1.1); /* Slight scale-up for a cool effect */
   pointer-events: none; /* Prevent interaction during fade-out */
 }
+
+
+
+
+
+
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 20px;
+  z-index: 2000; /* Above loader and other elements */
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Hamburger/Star Toggle Icon */
+.nav-toggle {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Icon Wrapper */
+.icon-wrapper {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+/* Default black color for icons */
+.hamburger-icon path,
+.star-icon path {
+  stroke: black;
+  fill: black;
+}
+
+/* Color toggling classes */
+.icon-wrapper.black .hamburger-icon path,
+.icon-wrapper.black .star-icon path {
+  stroke: black;
+  fill: black;
+}
+
+.icon-wrapper.white .hamburger-icon path,
+.icon-wrapper.white .star-icon path {
+  stroke: white;
+  fill: white;
+}
+
+
+/* Red color for SECTION_11 */
+.icon-wrapper.red .hamburger-icon path,
+.icon-wrapper.red .star-icon path {
+    stroke: #ff1400;
+    fill: #ff1400;
+}
+
+/* Animation for hamburger to star */
+.hamburger-icon,
+.star-icon {
+  position: absolute;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hamburger-icon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.star-icon {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.nav-toggle:hover .hamburger-icon,
+.nav-toggle.active .hamburger-icon {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.nav-toggle:hover .star-icon,
+.nav-toggle.active .star-icon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Floating Menu */
+.nav-menu {
+  position: fixed;
+  top: 60px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.2); /* White transparent background */
+  backdrop-filter: blur(10px); /* Glassy effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  display: none;
+  flex-direction: column;
+  z-index: 2000;
+}
+
+.nav-menu.active {
+  display: flex;
+}
+
+.nav-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li {
+  margin: 10px 0;
+}
+
+.nav-menu a {
+  color: black; /* Non-transparent black text */
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 500;
+  font-family: 'BOLDE Bold', sans-serif;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #ff0000; /* Red hover effect to match theme */
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  font-family: 'BOLDE Bold', sans-serif;
+  color: black;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #ff0000; /* Red hover effect */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .navbar {
+      padding: 10px 15px;
+  }
+
+  .nav-toggle {
+      width: 32px;
+      height: 32px;
+  }
+
+  .nav-toggle .hamburger-icon,
+  .nav-toggle .star-icon {
+      width: 20px;
+      height: 20px;
+  }
+
+  .nav-menu {
+      top: 50px;
+      right: 15px;
+      width: 200px;
+      padding: 15px;
+  }
+
+  .nav-menu a {
+    font-family: 'BOLDE Bold', sans-serif;
+      font-size: 16px;
+  }
+
+  .close-btn {
+    font-family: 'BOLDE Bold', sans-serif;
+      font-size: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+/* Existing CSS (unchanged) */
+.social-buttons {
+  position: absolute;
+  top: 2%;
+  left: 70%;
+  z-index: 1000;
+  display: flex;
+  gap: 12px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  color: black;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.social-icon:hover {
+  transform: scale(1.15);
+  background-color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  .social-buttons {
+      top: 1%;
+      left: 60%;
+      gap: 8px;
+  }
+  .social-icon {
+      width: 32px;
+      height: 32px;
+      font-size: 16px;
+  }
+}
+
+.section-10-video {
+  max-width: 100%;
+  height: auto;
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .section-10-video {
+      width: 20%;
+      top: 10%;
+  }
+  .video-1 {
+      left: 15%;
+  }
+  .video-2 {
+      left: 50%;
+  }
+  .video-3 {
+      left: 85%;
+  }
+}
+
+.portfolio-video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .portfolio-video {
+      width: 90%;
+      z-index: 10;
+  }
+}
+
+.gif-overlay {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .gif-overlay {
+      width: 70%;
+  }
+}
+
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.loader-gif {
+  max-width: 100%;
+  height: auto;
+  width: 200px;
+}
+
+.loader-overlay.loaded {
+  opacity: 0;
+  transform: scale(1.1);
+  pointer-events: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Ensure GIF maintains aspect ratio and is responsive */
 .gif-overlay {
