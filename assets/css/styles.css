@@ -193,19 +193,18 @@
 /* SECTION 8 */
 
 /* Ensure video maintains aspect ratio and is responsive */
-video {
+.portfolio-video {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
-/* Adjust video width for mobile */
 @media (max-width: 768px) {
-  video {
-      width: 90%; /* Increase width on mobile for better visibility */
+  .portfolio-video {
+      width: 90%;
+      z-index: 10;
   }
 }
-
-
 
 
 
