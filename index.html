@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link href="assets/images/favicon.png" rel="icon">
-    <link rel="stylesheet" href="assets/css/homepage.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <title>STAR MKT &#8211; Bem-vindo à STARMKT, onde a sua história se transforma em estrelas.</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
@@ -67,16 +67,25 @@
     </section>
 
     <section id="SECTION_8">
-        <div>
+        <div style="position: relative; width: 100%;">
             <img src="assets/images/SECTION_8.png" alt="Section 8"
-                style="width: 100%; height: auto; display: block; image-rendering: auto;" />
+                 style="width: 100%; height: auto; display: block; image-rendering: auto;" />
+            <video 
+                style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 90%; height: auto;"
+                autoplay loop muted playsinline>
+                <source src="assets/videos/PORTFOLIO_DESKTOP.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
     </section>
 
     <section id="SECTION_7">
-        <div>
+        <div style="position: relative; width: 100%;">
             <img src="assets/images/SECTION_7.png" alt="Section 7"
-                style="width: 100%; height: auto; display: block; image-rendering: auto;" />
+                 style="width: 100%; height: auto; display: block; image-rendering: auto;" />
+            <img src="assets/images/WHITE_STARS.gif" alt="White Stars GIF"
+                 style="position: absolute; top: -23%; left: 50%; transform: translateX(-50%); width: 70%; height: auto;"
+                 class="gif-overlay" />
         </div>
     </section>
 
@@ -128,9 +137,20 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen>
             </iframe>
+            <!-- Left Chevrons Container -->
+            <div class="chevron-container chevron-left">
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+            </div>
+            <!-- Right Chevrons Container -->
+            <div class="chevron-container chevron-right">
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+            </div>
         </div>
     </section>
-
 
     <script src="assets/js/backwards-rendering.js"></script>
 

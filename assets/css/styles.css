@@ -44,7 +44,128 @@
     display: block;
     image-rendering: auto;
   }
-  
+
+
+
+
+
+  .chevron-container {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 20; /* Ensure chevrons are above the video */
+}
+
+.chevron-left {
+    left: calc(50% - 35% - 90px); /* 35% is half the video width (70%/2), 90px adjusts for spacing */
+}
+
+.chevron-right {
+    right: calc(50% - 35% - 90px); /* Same logic for the right side */
+}
+
+.chevron {
+    width: 40px;
+    height: 40px;
+    transform: translateY(-50%) rotate(45deg); /* Center vertically and rotate to point down */
+    margin: -5px 0; /* Reduced spacing between chevrons */
+    animation: bounce 1.5s infinite;
+    /* Thicker borders and rounded edges */
+    border-bottom: 8px solid; /* Increased from 5px to 8px for thickness */
+    border-right: 8px solid;
+    border-radius: 4px; /* Adds rounded edges */
+}
+
+/* Apply fading effect */
+.chevron:nth-child(1) {
+    /* Top chevron: Faded toward white */
+    border-bottom-color: #ffd2cc; /* RGB(255, 210, 204) */
+    border-right-color: #ffd2cc;
+}
+
+.chevron:nth-child(2) {
+    /* Middle chevron: Midway between red and white */
+    border-bottom-color: #ff8a80; /* RGB(255, 138, 128) */
+    border-right-color: #ff8a80;
+}
+
+.chevron:nth-child(3) {
+    /* Bottom chevron: Full color */
+    border-bottom-color: #ff1400; /* RGB(255, 20, 0) */
+    border-right-color: #ff1400;
+}
+
+/* Bounce animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(-50%) rotate(45deg);
+    }
+    40% {
+        transform: translateY(-30%) rotate(45deg);
+    }
+    60% {
+        transform: translateY(-40%) rotate(45deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* SECTION 8 */
+
+
+/* Ensure GIF maintains aspect ratio and is responsive */
+.gif-overlay {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Adjust GIF width for mobile */
+@media (max-width: 768px) {
+  .gif-overlay {
+      width: 90%; /* Already set to 90% in HTML, but ensures consistency */
+  }
+}
+
+
+
+
+
+
+/* SECTION 8 */
+
+/* Ensure video maintains aspect ratio and is responsive */
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Adjust video width for mobile */
+@media (max-width: 768px) {
+  video {
+      width: 90%; /* Increase width on mobile for better visibility */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
