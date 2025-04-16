@@ -1,37 +1,38 @@
-// backwards-rendering.js
-
 let allowScrollToBottom = true;
 
-function scrollToBottom() {
-    if (allowScrollToBottom) {
-        window.scrollTo(0, document.body.scrollHeight);
-    }
+function forceScrollToBottom() {
+  if (!allowScrollToBottom) return;
+
+  // Force it twice to beat layout shifts (e.g. image load)
+  setTimeout(() => {
+    window.scrollTo(0, document.body.scrollHeight);
+    setTimeout(() => {
+      window.scrollTo(0, document.body.scrollHeight);
+    }, 50);
+  }, 0);
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    allowScrollToBottom = true;
-    setTimeout(scrollToBottom, 100);
+// 1. Run on DOM ready
+document.addEventListener("DOMContentLoaded", () => {
+  forceScrollToBottom();
 });
 
-window.addEventListener("pageshow", function (event) {
-    if (event.persisted) {
-        allowScrollToBottom = true;
-        setTimeout(scrollToBottom, 100);
-    } else {
-        scrollToBottom();
-    }
+// 2. Run again after full page load (ensures all layout is resolved)
+window.addEventListener("load", () => {
+  forceScrollToBottom();
 });
 
-window.onload = function () {
-    allowScrollToBottom = true;
-    setTimeout(scrollToBottom, 100);
-};
+// 3. Also handle back/forward navigation properly
+window.addEventListener("pageshow", (event) => {
+  if (event.persisted) {
+    forceScrollToBottom();
+  }
+});
 
-// Optional: expose a helper to toggle scroll behavior
+// 4. Helpers if needed
 function disableScrollToBottom() {
-    allowScrollToBottom = false;
+  allowScrollToBottom = false;
 }
-
 function enableScrollToBottom() {
-    allowScrollToBottom = true;
+  allowScrollToBottom = true;
 }
