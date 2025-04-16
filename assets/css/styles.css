@@ -74,13 +74,20 @@
 }
 
 /* ✅ DOUBLE SIZE on mobile screens */
+
+
 @media (max-width: 767px) {
   .loader-gif {
     width: 400px !important;
+    margin: 0 auto;
+  }
+
+  .loader-overlay {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 }
-
-
 
 
 /* Navbar */
