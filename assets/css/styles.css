@@ -199,7 +199,7 @@
 }
 
 .nav-menu a {
-  color: black; /* Non-transparent black text */
+  color: black; 
   font-size: 18px;
   text-decoration: none;
   font-weight: 500;
@@ -208,7 +208,7 @@
 }
 
 .nav-menu a:hover {
-  color: #ff0000; /* Red hover effect to match theme */
+  color: #ff0000; 
 }
 
 /* Close Button */
@@ -224,7 +224,7 @@
 }
 
 .close-btn:hover {
-  color: #ff0000; /* Red hover effect */
+  color: #ff0000; 
 }
 
 /* Responsive Adjustments */
@@ -410,7 +410,7 @@
 /* Adjust GIF width for mobile */
 @media (max-width: 768px) {
   .gif-overlay {
-      width: 70%; /* Matches the inline style in SECTION_7 */
+      width: 70%; 
   }
 }
 
@@ -421,7 +421,6 @@
     width: 100%;
     overflow: hidden;
     position: relative;
-    background: rgb(37, 0, 172); /* just for testing */
   }
   
   /* 4. Force inner div + img to ignore scrollbar width issues */
@@ -487,7 +486,7 @@
 
 .chevron:nth-child(3) {
     /* Bottom chevron: Full color */
-    border-bottom-color: #ff1400; /* RGB(255, 20, 0) */
+    border-bottom-color: #ff1400; 
     border-right-color: #ff1400;
 }
 
@@ -511,9 +510,6 @@
 
 
 
-
-
-
 /* SECTION 7 */
 
 
@@ -526,7 +522,7 @@
 /* Adjust GIF width for mobile */
 @media (max-width: 768px) {
   .gif-overlay {
-      width: 90%; /* Already set to 90% in HTML, but ensures consistency */
+      width: 90%; 
   }
 }
 
@@ -536,8 +532,6 @@
 
 
 /* SECTION 8 */
-
-/* Ensure video maintains aspect ratio and is responsive */
 .portfolio-video {
   max-width: 100%;
   height: auto;
@@ -561,7 +555,7 @@
 .section-10-video {
   max-width: 100%;
   height: auto;
-  z-index: 10; /* Ensure videos are above the image */
+  z-index: 10; 
 }
 
 /* Adjust video size and position for mobile */
@@ -624,8 +618,8 @@
 /* Adjust social buttons for mobile */
 @media (max-width: 768px) {
   .social-buttons {
-      top: 1%; /* Slightly closer to the top on mobile */
-      left: 60%; /* Adjust alignment for smaller screens */
+      top: 25%; /* Slightly closer to the top on mobile */
+      left: 70%; /* Adjust alignment for smaller screens */
       gap: 8px; /* Reduce gap between icons */
   }
   .social-icon {
