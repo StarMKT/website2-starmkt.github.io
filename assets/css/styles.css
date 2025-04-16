@@ -1,0 +1,77 @@
+/* 1. Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* 2. Prevent side scroll AND body overflow */
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+    background: black;
+    position: relative;
+  }
+
+
+  body {
+    -webkit-overflow-scrolling: touch;
+    -webkit-text-size-adjust: 100%;
+  }
+
+
+  
+  
+  /* 3. Sections take full width naturally */
+  section {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background: rgb(37, 0, 172); /* just for testing */
+  }
+  
+  /* 4. Force inner div + img to ignore scrollbar width issues */
+  section > div {
+    width: 100vw;
+    max-width: 100vw;
+    overflow: hidden;
+  }
+  
+  section img {
+    width: 100vw;
+    max-width: 100vw;
+    height: auto;
+    display: block;
+    image-rendering: auto;
+  }
+  
+
+.social-buttons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    gap: 12px;
+  }
+  
+  .social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    color: black;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.15);
+    background-color: #f0f0f0;
+  }
+  
