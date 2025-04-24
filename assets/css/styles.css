@@ -404,7 +404,6 @@
 
 
 
-
 /* Ensure GIF maintains aspect ratio and is responsive */
 .gif-overlay {
   max-width: 100%;
@@ -536,6 +535,7 @@
 
 
 /* SECTION 8 */
+
 .portfolio-video {
   max-width: 100%;
   height: auto;
