@@ -479,8 +479,9 @@
 /* Apply fading effect */
 .chevron:nth-child(1) {
     /* Top chevron: Faded toward white */
-    border-bottom-color: #ffd2cc; /* RGB(255, 210, 204) */
-    border-right-color: #ffd2cc;
+    
+    border-bottom-color: #ff1400; 
+    border-right-color: #ff1400;
 }
 
 .chevron:nth-child(2) {
@@ -491,8 +492,8 @@
 
 .chevron:nth-child(3) {
     /* Bottom chevron: Full color */
-    border-bottom-color: #ff1400; 
-    border-right-color: #ff1400;
+    border-bottom-color: #ffd2cc; /* RGB(255, 210, 204) */
+    border-right-color: #ffd2cc;
 }
 
 /* Bounce animation */
