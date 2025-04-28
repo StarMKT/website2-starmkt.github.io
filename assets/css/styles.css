@@ -511,6 +511,22 @@
 
 
 
+/* 
+SECTION 3 */
+
+.section-3 {
+
+}
+
+
+@media (max-width: 768px) {
+  .section-3 {
+      width: 100%; 
+      height: auto !important;
+  }
+}
+
+
 
 
 /* SECTION 7 */
@@ -613,6 +629,42 @@
 }
 
 /* Adjust social buttons for mobile */
+
+
+
+@media (max-width: 347px) {
+  .social-buttons {
+      top: 25%; /* Slightly closer to the top on mobile */
+      left: 60% !important; /* Adjust alignment for smaller screens */
+      gap: 8px; /* Reduce gap between icons */
+  }
+  .social-icon {
+      width: 15px !important; /* Smaller icons on mobile */
+      height: 15px !important;
+      font-size: 11px !important; /* Smaller icon size */
+  }
+}
+
+
+@media (max-width: 410px) {
+  .social-buttons {
+      top: 25%; /* Slightly closer to the top on mobile */
+      left: 70%; /* Adjust alignment for smaller screens */
+      gap: 8px; /* Reduce gap between icons */
+  }
+  .social-icon {
+      width: 19px !important; /* Smaller icons on mobile */
+      height: 19px !important;
+      font-size: 13px; /* Smaller icon size */
+  }
+}
+  
+
+  
+
+
+
+
 @media (max-width: 768px) {
   .social-buttons {
       top: 25%; /* Slightly closer to the top on mobile */
