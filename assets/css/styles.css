@@ -13,6 +13,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Poppins Bold';
+  src: url('../fonts/poppins-bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 
@@ -516,7 +524,7 @@
 SECTION 3 */
 
 .section-3 {
-
+  
 }
 
 
@@ -533,21 +541,72 @@ SECTION 3 */
 /* SECTION 7 */
 
 
-/* Ensure GIF maintains aspect ratio and is responsive */
-.gif-overlay {
-  max-width: 100%;
-  height: auto;
+.section-7 {
+  position: relative;
+  width: 100%;
 }
 
-/* Adjust GIF width for mobile */
+.section-7 img {
+  display: block;
+  width: 100%;
+  height: auto;
+  image-rendering: auto;
+}
+
+/* GIF overlay settings */
+.gif-overlay {
+  position: absolute;
+  top: -23%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  max-width: 100%;
+  height: auto;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Mobile GIF adjustment */
 @media (max-width: 768px) {
   .gif-overlay {
-      width: 90%; 
+    width: 90%;
   }
 }
 
+/* Overlay text */
+.overlay-text {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 10vw;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: #380767;
+  font-family: 'Poppins Bold', sans-serif;
+  flex-wrap: nowrap;
+  padding: 0 5vw;
+  text-align: center;
+  z-index: 2;
+}
 
+.text-block {
+  display: flex;
+  flex-direction: column;
+}
 
+.main-text {
+  font-size: clamp(24px, 6vw, 72px);
+  margin: 0;
+}
+
+.sub-text {
+  font-size: clamp(12px, 3vw, 24px);
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
 
 
 

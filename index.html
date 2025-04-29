@@ -7,6 +7,8 @@
     <link href="assets/images/favicon.png" rel="icon">
     <link rel="stylesheet" href="assets/css/styles.css">
     <title>STAR MKT – Bem-vindo à STARMKT, onde a sua história se transforma em estrelas.</title>
+    <meta name="description"
+        content="A StarMKT é a agência de trade marketing que conecta marcas e consumidores de forma inovadora. Saiba mais!">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
@@ -125,18 +127,39 @@
 
         </div>
     </section>
-    <section id="SECTION_7">
+
+
+    <section id="SECTION_7" class="section-7">
         <div style="position: relative; width: 100%;">
             <img src="assets/images/SECTION_7.png" alt="Section 7"
                 style="width: 100%; height: auto; display: block; image-rendering: auto;" />
-            <img src="assets/images/WHITE_STARS.gif" alt="White Stars GIF"
-                style="position: absolute; top: -23%; left: 50%; transform: translateX(-50%); width: 70%; height: auto;"
-                class="gif-overlay" />
+
+            <!-- White Stars GIF Overlay -->
+            <img src="assets/images/WHITE_STARS.gif" alt="White Stars GIF" style="position: absolute; top: -23%; left: 50%; transform: translateX(-50%);
+                      width: 70%; height: auto; pointer-events: none; z-index: 1;" class="gif-overlay" />
+
+            <!-- Text Overlay -->
+            <!-- Text Overlay -->
+            <div class="overlay-text">
+                <div class="text-block">
+                    <p class="main-text count-up" data-count="300">+0</p>
+                    <p class="sub-text">campanhas</p>
+                </div>
+                <div class="text-block">
+                    <p class="main-text count-up" data-count="100">+0</p>
+                    <p class="sub-text">de impressões</p>
+                </div>
+            </div>
+
         </div>
     </section>
+
+
+
+
     <section id="SECTION_6">
         <div>
-            <img src="assets/images/SECTION_6.png" alt="Section 6"
+            <img src="assets/images/SECTION_6.jpg" alt="Section 6"
                 style="width: 100%; height: auto; display: block; image-rendering: auto;" />
         </div>
     </section>
@@ -190,6 +213,7 @@
     <script src="assets/js/backwards-rendering.js"></script>
     <script src="assets/js/loader.js"></script>
     <script src="assets/js/menu-toggle.js"></script>
+    <script src="assets/js/counting-up.js"></script>
 </body>
 
 </html>
