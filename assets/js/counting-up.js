@@ -1,32 +1,42 @@
-  function animateCountUp(el, target, suffix = '') {
-    let current = 0;
-    const speed = 5; // Smaller = faster
+function animateCountUp(el, target, suffix = '') {
+  let current = 0;
+  const update = () => {
+    const increment = Math.ceil(target / 30);
+    current += increment;
+    if (current >= target) {
+      el.textContent = `+${target}${suffix}`;
+    } else {
+      el.textContent = `+${current}`;
+      requestAnimationFrame(update);
+    }
+  };
+  update();
+}
 
-    const update = () => {
-      const increment = Math.ceil(target / 30); // 30 steps
-      current += increment;
-      if (current >= target) {
-        el.textContent = `+${target}${suffix}`;
-      } else {
-        el.textContent = `+${current}${suffix}`;
-        requestAnimationFrame(update);
-      }
-    };
+function startCounting() {
+  document.querySelectorAll('.count-up').forEach((el, idx) => {
+    const target = parseInt(el.dataset.count, 10);
+    const suffix = idx === 1 ? 'Bi' : '';
+    animateCountUp(el, target, suffix);
+  });
+}
 
-    update();
+let hasCounted = false;
+
+function checkAndStartCount() {
+  const overlayText = document.querySelector('.overlay-text');
+  if (!overlayText || hasCounted) return;
+
+  const rect = overlayText.getBoundingClientRect();
+  const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+  if (rect.top < windowHeight && rect.bottom > 0) {
+    hasCounted = true;
+    startCounting();
+    window.removeEventListener('scroll', checkAndStartCount);
+    window.removeEventListener('load', checkAndStartCount);
   }
+}
 
-  const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        document.querySelectorAll('.count-up').forEach((el, idx) => {
-          const target = parseInt(el.dataset.count);
-          const suffix = idx === 1 ? 'Bi' : '';
-          animateCountUp(el, target, suffix);
-        });
-        obs.disconnect(); // Only run once
-      }
-    });
-  }, { threshold: 0.5 });
-
-  observer.observe(document.querySelector('.overlay-text'));
+window.addEventListener('scroll', checkAndStartCount);
+window.addEventListener('load', checkAndStartCount);
