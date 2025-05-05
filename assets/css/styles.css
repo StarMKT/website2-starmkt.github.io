@@ -20,6 +20,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Poppins Regular';
+  src: url('../fonts/poppins-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
@@ -29,29 +37,30 @@
 
 /* 1. Global Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* 2. Prevent side scroll AND body overflow */
-  html, body {
-    width: 100%;
-    overflow-x: hidden;
-    background: black;
-    position: relative;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. Prevent side scroll AND body overflow */
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  background: black;
+  position: relative;
+}
 
 
-  body {
-    -webkit-overflow-scrolling: touch;
-    -webkit-text-size-adjust: 100%;
-  }
+body {
+  -webkit-overflow-scrolling: touch;
+  -webkit-text-size-adjust: 100%;
+}
 
 
 
 
-  /* LOADER */
+/* LOADER */
 
 .loader-overlay {
   position: fixed;
@@ -105,7 +114,8 @@
   left: 0;
   width: 100%;
   padding: 15px 20px;
-  z-index: 2000; /* Above loader and other elements */
+  z-index: 2000;
+  /* Above loader and other elements */
   display: flex;
   justify-content: flex-end;
 }
@@ -152,8 +162,8 @@
 /* Red color for SECTION_11 */
 .icon-wrapper.red .hamburger-icon path,
 .icon-wrapper.red .star-icon path {
-    stroke: #ff1400;
-    fill: #ff1400;
+  stroke: #ff1400;
+  fill: #ff1400;
 }
 
 /* Animation for hamburger to star */
@@ -190,9 +200,12 @@
   position: fixed;
   top: 60px;
   right: 20px;
-  background: rgba(255, 255, 255, 0.2); /* White transparent background */
-  backdrop-filter: blur(10px); /* Glassy effect */
-  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  background: rgba(255, 255, 255, 0.2);
+  /* White transparent background */
+  backdrop-filter: blur(10px);
+  /* Glassy effect */
+  -webkit-backdrop-filter: blur(10px);
+  /* For Safari */
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   padding: 20px;
@@ -216,7 +229,7 @@
 }
 
 .nav-menu a {
-  color: black; 
+  color: black;
   font-size: 18px;
   text-decoration: none;
   font-weight: 500;
@@ -225,7 +238,7 @@
 }
 
 .nav-menu a:hover {
-  color: #ff0000; 
+  color: #ff0000;
 }
 
 /* Close Button */
@@ -241,41 +254,41 @@
 }
 
 .close-btn:hover {
-  color: #ff0000; 
+  color: #ff0000;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .navbar {
-      padding: 10px 15px;
+    padding: 10px 15px;
   }
 
   .nav-toggle {
-      width: 32px;
-      height: 32px;
+    width: 32px;
+    height: 32px;
   }
 
   .nav-toggle .hamburger-icon,
   .nav-toggle .star-icon {
-      width: 20px;
-      height: 20px;
+    width: 20px;
+    height: 20px;
   }
 
   .nav-menu {
-      top: 50px;
-      right: 15px;
-      width: 200px;
-      padding: 15px;
+    top: 50px;
+    right: 15px;
+    width: 200px;
+    padding: 15px;
   }
 
   .nav-menu a {
     font-family: 'BOLDE Bold', sans-serif;
-      font-size: 16px;
+    font-size: 16px;
   }
 
   .close-btn {
     font-family: 'BOLDE Bold', sans-serif;
-      font-size: 20px;
+    font-size: 20px;
   }
 }
 
@@ -315,14 +328,15 @@
 
 @media (max-width: 768px) {
   .social-buttons {
-      top: 1%;
-      left: 60%;
-      gap: 8px;
+    top: 1%;
+    left: 60%;
+    gap: 8px;
   }
+
   .social-icon {
-      width: 32px;
-      height: 32px;
-      font-size: 16px;
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
   }
 }
 
@@ -334,17 +348,20 @@
 
 @media (max-width: 768px) {
   .section-10-video {
-      width: 20%;
-      top: 10%;
+    width: 20%;
+    top: 10%;
   }
+
   .video-1 {
-      left: 15%;
+    left: 15%;
   }
+
   .video-2 {
-      left: 50%;
+    left: 50%;
   }
+
   .video-3 {
-      left: 85%;
+    left: 85%;
   }
 }
 
@@ -356,8 +373,8 @@
 
 @media (max-width: 768px) {
   .portfolio-video {
-      width: 90%;
-      z-index: 10;
+    width: 90%;
+    z-index: 10;
   }
 }
 
@@ -370,7 +387,7 @@
 
 @media (max-width: 768px) {
   .gif-overlay {
-      width: 70%;
+    width: 70%;
   }
 }
 
@@ -423,97 +440,116 @@
 /* Adjust GIF width for mobile */
 @media (max-width: 768px) {
   .gif-overlay {
-      width: 70%; 
+    width: 70%;
   }
 }
 
-  
-  
-  /* 3. Sections take full width naturally */
-  section {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  /* 4. Force inner div + img to ignore scrollbar width issues */
-  section > div {
-    width: 100vw;
-    max-width: 100vw;
-    overflow: hidden;
-  }
-  
-  section img {
-    width: 100vw;
-    max-width: 100vw;
-    height: auto;
-    display: block;
-    image-rendering: auto;
-  }
+
+
+/* 3. Sections take full width naturally */
+section {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 4. Force inner div + img to ignore scrollbar width issues */
+section>div {
+  width: 100vw;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+section img {
+  width: 100vw;
+  max-width: 100vw;
+  height: auto;
+  display: block;
+  image-rendering: auto;
+}
 
 
 
 
 
-  .chevron-container {
-    position: absolute;
-    top: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 20; /* Ensure chevrons are above the video */
+.chevron-container {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 20;
+  /* Ensure chevrons are above the video */
 }
 
 .chevron-left {
-    left: calc(50% - 35% - 90px); /* 35% is half the video width (70%/2), 90px adjusts for spacing */
+  left: calc(50% - 35% - 90px);
+  /* 35% is half the video width (70%/2), 90px adjusts for spacing */
 }
 
 .chevron-right {
-    right: calc(50% - 35% - 90px); /* Same logic for the right side */
+  right: calc(50% - 35% - 90px);
+  /* Same logic for the right side */
 }
 
 .chevron {
   width: 40px;
   height: 40px;
-  transform: translateY(-50%) rotate(-135deg); /* Changed from rotate(45deg) to rotate(-135deg) to point up */
-  margin: -5px 0; /* Reduced spacing between chevrons */
+  transform: translateY(-50%) rotate(-135deg);
+  /* Changed from rotate(45deg) to rotate(-135deg) to point up */
+  margin: -5px 0;
+  /* Reduced spacing between chevrons */
   animation: bounce 1.5s infinite;
   /* Thicker borders and rounded edges */
-  border-bottom: 8px solid; /* Increased from 5px to 8px for thickness */
+  border-bottom: 8px solid;
+  /* Increased from 5px to 8px for thickness */
   border-right: 8px solid;
-  border-radius: 4px; /* Adds rounded edges */
+  border-radius: 4px;
+  /* Adds rounded edges */
 }
 
 /* Apply fading effect */
 .chevron:nth-child(1) {
-    /* Top chevron: Faded toward white */
-    
-    border-bottom-color: #ff1400; 
-    border-right-color: #ff1400;
+  /* Top chevron: Faded toward white */
+
+  border-bottom-color: #ff1400;
+  border-right-color: #ff1400;
 }
 
 .chevron:nth-child(2) {
-    /* Middle chevron: Midway between red and white */
-    border-bottom-color: #ff8a80; /* RGB(255, 138, 128) */
-    border-right-color: #ff8a80;
+  /* Middle chevron: Midway between red and white */
+  border-bottom-color: #ff8a80;
+  /* RGB(255, 138, 128) */
+  border-right-color: #ff8a80;
 }
 
 .chevron:nth-child(3) {
-    /* Bottom chevron: Full color */
-    border-bottom-color: #ffd2cc; /* RGB(255, 210, 204) */
-    border-right-color: #ffd2cc;
+  /* Bottom chevron: Full color */
+  border-bottom-color: #ffd2cc;
+  /* RGB(255, 210, 204) */
+  border-right-color: #ffd2cc;
 }
 
 /* Bounce animation */
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-      transform: translateY(-50%) rotate(-135deg); /* Updated rotation to match */
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(-50%) rotate(-135deg);
+    /* Updated rotation to match */
   }
+
   40% {
-      transform: translateY(-30%) rotate(-135deg); /* Updated rotation */
+    transform: translateY(-30%) rotate(-135deg);
+    /* Updated rotation */
   }
+
   60% {
-      transform: translateY(-40%) rotate(-135deg); /* Updated rotation */
+    transform: translateY(-40%) rotate(-135deg);
+    /* Updated rotation */
   }
 }
 
@@ -523,17 +559,117 @@
 /* 
 SECTION 3 */
 
-.section-3 {
-  
-}
+.section-3 {}
 
 
 @media (max-width: 768px) {
   .section-3 {
-      width: 100%; 
-      height: auto !important;
+    width: 100%;
+    height: auto !important;
   }
 }
+
+
+
+/* ---------- SECTION 4 base ---------- */
+.section-4 {
+  position: relative;
+  width: 100%;
+}
+
+.section-4-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  image-rendering: auto;
+}
+
+/* ---------- Headline overlay ---------- */
+.headline-wrap {
+  position: absolute;
+  top: 37%;
+  left: 0;
+  width: 100%;
+  transform: perspective(1200px) rotateX(32deg) rotateZ(-33deg) skewX(15deg);
+  transform-origin: center;
+  pointer-events: none;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* each line + its cursor inline together */
+.line-block {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* colours shared */
+.line1,
+.line2,
+.cursor {
+  color: #fff;
+  white-space: nowrap;
+}
+
+/* first (bold) line */
+.line1 {
+  font-family: 'Poppins Bold', sans-serif;
+  font-size: clamp(32px, 9vw, 200px);
+  line-height: 1;
+}
+
+/* second (regular) line – smaller */
+.line2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: clamp(14px, 3vw, 35px);
+  margin-top: .15em;
+  line-height: 1.05;
+}
+
+/* ---------- Cursor (independent, always visible) ---------- */
+@keyframes blink {
+
+  0%,
+  49% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.cursor {
+  /* start hidden; JS toggles display */
+  display: none;
+
+  /* thin white bar drawn with border */
+  border-left: 0.08em solid #fff;
+  /* <— visible on any DPI */
+  height: 1em;
+  /* matches local font size */
+  margin-left: 0.05em;
+  /* gap after last letter */
+
+  animation: blink .8s step-end infinite;
+  pointer-events: none;
+}
+
+/* size sync per line */
+.c1 {
+  font-size: clamp(32px, 9vw, 200px);
+}
+
+/* cursor for bold line */
+.c2 {
+  font-size: clamp(14px, 3vw, 35px);
+}
+
+/* cursor for small line */
 
 
 
@@ -596,7 +732,7 @@ SECTION 3 */
 .text-block {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; 
+  align-items: flex-start;
 }
 
 .main-text {
@@ -608,7 +744,8 @@ SECTION 3 */
 .sub-text {
   font-size: clamp(12px, 3vw, 24px);
   margin: 0;
-  margin-top: 0.2em; /* Small top margin to control distance */
+  margin-top: 0.2em;
+  /* Small top margin to control distance */
   font-family: 'Poppins', sans-serif;
 }
 
@@ -624,8 +761,8 @@ SECTION 3 */
 
 @media (max-width: 768px) {
   .portfolio-video {
-      width: 90%;
-      z-index: 10;
+    width: 90%;
+    z-index: 10;
   }
 }
 
@@ -639,24 +776,32 @@ SECTION 3 */
 .section-10-video {
   max-width: 100%;
   height: auto;
-  z-index: 10; 
+  z-index: 10;
 }
 
 /* Adjust video size and position for mobile */
 @media (max-width: 768px) {
   .section-10-video {
-      width: 20%; /* Smaller width on mobile to fit three videos */
-      top: 10%; /* Slightly adjust vertical position for mobile */
+    width: 20%;
+    /* Smaller width on mobile to fit three videos */
+    top: 10%;
+    /* Slightly adjust vertical position for mobile */
   }
+
   /* Adjust horizontal positions to fit smaller screen */
   .video-1 {
-      left: 15%; /* Closer to the left edge */
+    left: 15%;
+    /* Closer to the left edge */
   }
+
   .video-2 {
-      left: 50%; /* Center remains the same */
+    left: 50%;
+    /* Center remains the same */
   }
+
   .video-3 {
-      left: 85%; /* Closer to the right edge */
+    left: 85%;
+    /* Closer to the right edge */
   }
 }
 
@@ -665,8 +810,10 @@ SECTION 3 */
 /* SOCIAL BUTTONS */
 .social-buttons {
   position: absolute;
-  top: 27%; /* Just above the "FALE COM NOSSO" text, which is at ~5% from the top */
-  left: 70%; /* Align with the starting point of "FALE COM NOSSO" text */
+  top: 27%;
+  /* Just above the "FALE COM NOSSO" text, which is at ~5% from the top */
+  left: 70%;
+  /* Align with the starting point of "FALE COM NOSSO" text */
   z-index: 1000;
   display: flex;
   gap: 12px;
@@ -698,42 +845,60 @@ SECTION 3 */
 
 @media (max-width: 347px) {
   .social-buttons {
-      top: 25%; /* Slightly closer to the top on mobile */
-      left: 60% !important; /* Adjust alignment for smaller screens */
-      gap: 8px; /* Reduce gap between icons */
+    top: 25%;
+    /* Slightly closer to the top on mobile */
+    left: 60% !important;
+    /* Adjust alignment for smaller screens */
+    gap: 8px;
+    /* Reduce gap between icons */
   }
+
   .social-icon {
-      width: 15px !important; /* Smaller icons on mobile */
-      height: 15px !important;
-      font-size: 12px !important; /* Smaller icon size */
+    width: 15px !important;
+    /* Smaller icons on mobile */
+    height: 15px !important;
+    font-size: 12px !important;
+    /* Smaller icon size */
   }
 }
 
 
 @media (max-width: 410px) {
   .social-buttons {
-      top: 25%; /* Slightly closer to the top on mobile */
-      left: 60% !important; /* Adjust alignment for smaller screens */
-      gap: 8px; /* Reduce gap between icons */
+    top: 25%;
+    /* Slightly closer to the top on mobile */
+    left: 60% !important;
+    /* Adjust alignment for smaller screens */
+    gap: 8px;
+    /* Reduce gap between icons */
   }
+
   .social-icon {
-      width: 19px !important; /* Smaller icons on mobile */
-      height: 19px !important;
-      font-size: 12px !important; /* Smaller icon size */
+    width: 19px !important;
+    /* Smaller icons on mobile */
+    height: 19px !important;
+    font-size: 12px !important;
+    /* Smaller icon size */
   }
 }
 
 
 @media (max-width: 450px) {
   .social-buttons {
-      top: 25%; /* Slightly closer to the top on mobile */
-      left: 65% !important; /* Adjust alignment for smaller screens */
-      gap: 8px; /* Reduce gap between icons */
+    top: 25%;
+    /* Slightly closer to the top on mobile */
+    left: 65% !important;
+    /* Adjust alignment for smaller screens */
+    gap: 8px;
+    /* Reduce gap between icons */
   }
+
   .social-icon {
-      width: 19px !important; /* Smaller icons on mobile */
-      height: 19px !important;
-      font-size: 12px !important; /* Smaller icon size */
+    width: 19px !important;
+    /* Smaller icons on mobile */
+    height: 19px !important;
+    font-size: 12px !important;
+    /* Smaller icon size */
   }
 }
 
@@ -741,55 +906,79 @@ SECTION 3 */
 
 @media (max-width: 510px) {
   .social-buttons {
-      top: 25%; /* Slightly closer to the top on mobile */
-      left: 65% !important; /* Adjust alignment for smaller screens */
-      gap: 8px; /* Reduce gap between icons */
+    top: 25%;
+    /* Slightly closer to the top on mobile */
+    left: 65% !important;
+    /* Adjust alignment for smaller screens */
+    gap: 8px;
+    /* Reduce gap between icons */
   }
+
   .social-icon {
-      width: 19px !important; /* Smaller icons on mobile */
-      height: 19px !important;
-      font-size: 12px !important; /* Smaller icon size */
+    width: 19px !important;
+    /* Smaller icons on mobile */
+    height: 19px !important;
+    font-size: 12px !important;
+    /* Smaller icon size */
   }
 }
-  
-  
+
+
 @media (max-width: 600px) {
   .social-buttons {
-      top: 25%; /* Slightly closer to the top on mobile */
-      left: 60% !important; /* Adjust alignment for smaller screens */
-      gap: 8px; /* Reduce gap between icons */
+    top: 25%;
+    /* Slightly closer to the top on mobile */
+    left: 60% !important;
+    /* Adjust alignment for smaller screens */
+    gap: 8px;
+    /* Reduce gap between icons */
   }
+
   .social-icon {
-      width: 21px !important; /* Smaller icons on mobile */
-      height: 21px !important;
-      font-size: 14px !important; /* Smaller icon size */
+    width: 21px !important;
+    /* Smaller icons on mobile */
+    height: 21px !important;
+    font-size: 14px !important;
+    /* Smaller icon size */
   }
 }
 
 @media (max-width: 620px) {
   .social-buttons {
-      top: 25%; /* Slightly closer to the top on mobile */
-      left: 66% !important; /* Adjust alignment for smaller screens */
-      gap: 8px; /* Reduce gap between icons */
+    top: 25%;
+    /* Slightly closer to the top on mobile */
+    left: 66% !important;
+    /* Adjust alignment for smaller screens */
+    gap: 8px;
+    /* Reduce gap between icons */
   }
+
   .social-icon {
-      width: 25px !important; /* Smaller icons on mobile */
-      height: 25px !important;
-      font-size: 16px !important; /* Smaller icon size */
+    width: 25px !important;
+    /* Smaller icons on mobile */
+    height: 25px !important;
+    font-size: 16px !important;
+    /* Smaller icon size */
   }
 }
 
 
 @media (max-width: 670px) {
   .social-buttons {
-      top: 25%; /* Slightly closer to the top on mobile */
-      left: 67% !important; /* Adjust alignment for smaller screens */
-      gap: 8px; /* Reduce gap between icons */
+    top: 25%;
+    /* Slightly closer to the top on mobile */
+    left: 67% !important;
+    /* Adjust alignment for smaller screens */
+    gap: 8px;
+    /* Reduce gap between icons */
   }
+
   .social-icon {
-      width: 25px !important; /* Smaller icons on mobile */
-      height: 25px !important;
-      font-size: 16px !important; /* Smaller icon size */
+    width: 25px !important;
+    /* Smaller icons on mobile */
+    height: 25px !important;
+    font-size: 16px !important;
+    /* Smaller icon size */
   }
 }
 
@@ -797,38 +986,40 @@ SECTION 3 */
 
 @media (max-width: 720px) {
   .social-buttons {
-      top: 25%; /* Slightly closer to the top on mobile */
-      left: 68% !important; /* Adjust alignment for smaller screens */
-      gap: 8px; /* Reduce gap between icons */
+    top: 25%;
+    /* Slightly closer to the top on mobile */
+    left: 68% !important;
+    /* Adjust alignment for smaller screens */
+    gap: 8px;
+    /* Reduce gap between icons */
   }
+
   .social-icon {
-      width: 25px !important; /* Smaller icons on mobile */
-      height: 25px !important;
-      font-size: 16px !important; /* Smaller icon size */
+    width: 25px !important;
+    /* Smaller icons on mobile */
+    height: 25px !important;
+    font-size: 16px !important;
+    /* Smaller icon size */
   }
 }
-  
-  
-  
-  
-  
-  
-  
-  
-
 
 
 
 @media (max-width: 768px) {
   .social-buttons {
-      top: 25%; /* Slightly closer to the top on mobile */
-      left: 70%; /* Adjust alignment for smaller screens */
-      gap: 8px; /* Reduce gap between icons */
+    top: 25%;
+    /* Slightly closer to the top on mobile */
+    left: 70%;
+    /* Adjust alignment for smaller screens */
+    gap: 8px;
+    /* Reduce gap between icons */
   }
+
   .social-icon {
-      width: 32px; /* Smaller icons on mobile */
-      height: 32px;
-      font-size: 16px; /* Smaller icon size */
+    width: 32px;
+    /* Smaller icons on mobile */
+    height: 32px;
+    font-size: 16px;
+    /* Smaller icon size */
   }
 }
-  
