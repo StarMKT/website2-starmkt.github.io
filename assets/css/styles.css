@@ -592,17 +592,25 @@ SECTION 3 */
   width: 100%;
   transform: perspective(1200px) rotateX(32deg) rotateZ(-33deg) skewX(15deg);
   transform-origin: center;
-  pointer-events: none;
-  user-select: none;
   display: flex;
   flex-direction: column;
   align-items: center;
+  pointer-events: none;
+  user-select: none;
 }
 
-/* each line + its cursor inline together */
+/* new wrapper for the two lines */
+.lines-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* align START (left) inside the container */
+}
+
+/* fix line-block (remove centering) */
 .line-block {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: flex-start; /* align left, not center */
 }
 
 /* colours shared */
@@ -616,18 +624,24 @@ SECTION 3 */
 /* first (bold) line */
 .line1 {
   font-family: 'Poppins Bold', sans-serif;
-  font-size: clamp(32px, 9vw, 200px);
+  font-size: clamp(22px, 8vw, 190px); /* reduced base and max */
   line-height: 1;
 }
 
-/* second (regular) line – smaller */
 .line2 {
   font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  font-size: clamp(14px, 3vw, 35px);
+  font-weight: 380;
+  font-size: clamp(10px, 2.5vw, 25px); /* reduced base and max */
   margin-top: .15em;
   line-height: 1.05;
 }
+
+
+.block2 {
+  margin-top: 0.3em;
+}
+
+
 
 /* ---------- Cursor (independent, always visible) ---------- */
 @keyframes blink {
@@ -646,30 +660,22 @@ SECTION 3 */
 .cursor {
   /* start hidden; JS toggles display */
   display: none;
-
-  /* thin white bar drawn with border */
   border-left: 0.08em solid #fff;
-  /* <— visible on any DPI */
   height: 1em;
-  /* matches local font size */
   margin-left: 0.05em;
-  /* gap after last letter */
-
   animation: blink .8s step-end infinite;
   pointer-events: none;
 }
 
-/* size sync per line */
 .c1 {
   font-size: clamp(32px, 9vw, 200px);
 }
 
-/* cursor for bold line */
 .c2 {
   font-size: clamp(14px, 3vw, 35px);
 }
 
-/* cursor for small line */
+
 
 
 
