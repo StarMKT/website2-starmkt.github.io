@@ -141,7 +141,6 @@
                       width: 70%; height: auto; pointer-events: none; z-index: 1;" class="gif-overlay" />
 
             <!-- Text Overlay -->
-            <!-- Text Overlay -->
             <div class="overlay-text">
                 <div class="text-block">
                     <p class="main-text count-up" data-count="300">+0</p>
@@ -165,6 +164,7 @@
                 style="width: 100%; height: auto; display: block; image-rendering: auto;" />
         </div>
     </section>
+
     <section id="SECTION_5">
         <div>
             <img src="assets/images/SECTION_5.png" alt="Section 5"
@@ -180,11 +180,18 @@
 
             <div class="headline-wrap">
                 <div class="headline-content">
-                    <div class="lines-container"> <!-- NEW WRAPPER -->
+                    <div class="lines-container">
                         <div class="line-block">
                             <span id="line1" class="line1"></span>
                             <span class="cursor c1"></span>
                         </div>
+                    </div>
+
+                    <div class="cut-line-container">
+                        <div id="cut-line"></div> <!-- DASHED WHITE LINE -->
+                    </div>
+
+                    <div class="lines-container">
                         <div class="line-block line2-block">
                             <span id="line2" class="line2"></span>
                             <span class="cursor c2"></span>
@@ -192,7 +199,8 @@
                     </div>
                 </div>
             </div>
-            
+
+
 
         </div>
     </section>
@@ -205,6 +213,7 @@
                 style="width: 100%; height: auto; display: block; image-rendering: auto;" />
         </div>
     </section>
+
     <section id="SECTION_2">
         <div>
             <img src="assets/images/SECTION_2.png" alt="Section 2"
@@ -233,6 +242,12 @@
             </div>
         </div>
     </section>
+
+
+    <div class="cut-line-global">
+        <div id="cut-line"></div>
+      </div>
+      
 
     <script src="assets/js/backwards-rendering.js"></script>
     <script src="assets/js/loader.js"></script>

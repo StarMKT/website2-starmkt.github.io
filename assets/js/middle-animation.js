@@ -23,6 +23,7 @@
     const c1 = document.querySelector('.c1');
     const c2 = document.querySelector('.c2');
     const section = document.getElementById('SECTION_4');
+    const cutLine = document.getElementById('cut-line');
 
     let started = false;
     let i1 = 0;
@@ -39,8 +40,26 @@
             setTimeout(typeLine1, speed);
         } else {
             c1.style.display = 'none';
-            setTimeout(typeDynamicLine, 500);
+            setTimeout(() => {
+                animateCutLine(() => {
+                    setTimeout(typeDynamicLine, 300);
+                });
+            }, 500);
         }
+    }
+
+    function animateCutLine(callback) {
+        cutLine.style.opacity = 1;
+        cutLine.style.width = '0%';
+        let progress = 0;
+        const animation = setInterval(() => {
+            progress += 2;
+            cutLine.style.width = `${progress}%`;
+            if (progress >= 100) {
+                clearInterval(animation);
+                if (callback) callback();
+            }
+        }, 15);
     }
 
     function typeDynamicLine() {
@@ -67,21 +86,20 @@
             }
         }
     }
+
     function eraseDynamicLine() {
         const current = txts[currentTextIndex];
         const fullText = current.normal + current.bold;
         let index = fullText.length;
-    
+
         const eraseInterval = setInterval(() => {
             if (index > 0) {
                 index--;
                 l2.innerHTML = '';
-    
+
                 if (index <= current.normal.length) {
-                    // Only normal text is partially shown
                     l2.textContent = current.normal.substring(0, index);
                 } else {
-                    // Normal + partial bold
                     l2.textContent = current.normal;
                     const boldPart = document.createElement('strong');
                     boldPart.style.fontFamily = 'Poppins Bold';
@@ -101,7 +119,6 @@
             }
         }, 20);
     }
-    
 
     function blinkCursor(cursor, times, callback) {
         let blinkCount = 0;
