@@ -680,34 +680,82 @@ SECTION 3 */
 /* cut-line-global */
 
 
-.cut-line-global {
-  position: absolute;
-  top: 0;
-  left: 0;
+.cut-line-container {
   width: 100%;
-  height: 300vh; /* Enough height to cover all 3 sections */
-  pointer-events: none;
-  z-index: 10; /* Adjust to be on top of the sections but below cursor/text */
+  height: 20px; /* small vertical space for the line */
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  pointer-events: none;
 }
 
 #cut-line {
-  width: 0%;
   height: 2px;
+  width: 0%; /* start at 0%, will grow via JS */
   background-image: repeating-linear-gradient(
     to right,
-    white 0px,
+    white 0,
     white 10px,
     transparent 10px,
     transparent 20px
   );
   background-repeat: repeat-x;
+  background-size: auto;
   opacity: 0;
-  transition: width 1.2s ease-out;
+  transition: width 1.2s ease-out, opacity 0.5s ease-in;
 }
 
+
+
+
+
+.section-5 {
+
+}
+
+
+
+/* Wrapper around both sections for relative positioning */
+.overlay-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Overlay image */
+.ceo-image {
+  position: absolute;
+  width: 25vw; /* Responsive width */
+  left: 34%;
+  top: 50%; /* Adjust to fit the sections properly */
+  transform: translate(-50%, -50%);
+  z-index: 10;
+
+   /* Allow pointer events */
+   pointer-events: auto;
+   cursor: pointer;
+ 
+   /* Smooth bump animation */
+   transition: transform 0.3s cubic-bezier(0.25, 1.5, 0.5, 1);
+}
+
+.ceo-image:hover {
+  transform: translate(-50%, -50%) scale(1.07);
+}
+
+
+@media (max-width: 768px) {
+  .ceo-image {
+    width: 25vw;
+    top: 48%;
+  }
+}
+
+@media (max-width: 480px) {
+  .ceo-image {
+    width: 30vw;
+    top: 49%;
+  }
+}
 
 
 

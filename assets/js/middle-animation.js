@@ -50,16 +50,15 @@
 
     function animateCutLine(callback) {
         cutLine.style.opacity = 1;
-        cutLine.style.width = '0%';
         let progress = 0;
         const animation = setInterval(() => {
-            progress += 2;
+            progress += 2; // control the speed
             cutLine.style.width = `${progress}%`;
             if (progress >= 100) {
                 clearInterval(animation);
                 if (callback) callback();
             }
-        }, 15);
+        }, 15); // control the smoothness
     }
 
     function typeDynamicLine() {
