@@ -853,6 +853,127 @@ SECTION 3 */
 
 
 
+/* SECTION 9 */
+
+/* ====== bloco geral ====== */
+.section-9 {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.section-9 .bg-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.offices-panel {
+  position: absolute;
+  right: 4vw;
+  top: 8vh;
+  max-width: 260px;
+  color: #ffffff;
+  font-family: 'Poppins Regular', sans-serif;
+  z-index: 2;
+}
+
+/* título */
+.panel-title {
+  font-family: 'Poppins Bold', sans-serif;
+  font-size: clamp(1.2rem, 2.6vw, 1.6rem);
+  line-height: 1.15;
+  color: #380767;
+  margin-bottom: 1.25rem;
+}
+
+/* botão toggle */
+.office-toggle {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-family: 'Poppins Bold', sans-serif;
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
+  color: #ffffff;
+}
+
+/* conteúdo expandido */
+.office-content {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease;
+  font-family: 'Poppins Regular', sans-serif;
+  font-size: clamp(0.8rem, 1.6vw, 0.95rem);
+  line-height: 1.4;
+  padding-right: 0.2rem;
+}
+
+.office-content h4 {
+  margin: 0.75rem 0 0.25rem;
+  font-family: 'Poppins Bold', sans-serif;
+  font-size: 0.825rem;
+}
+.office-content p {
+  margin: 0 0 0.6rem;
+}
+
+/* SETINHA */
+.office-toggle .arrow {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3;
+  transition: transform 0.3s;
+}
+.office-toggle[aria-expanded="true"] .arrow {
+  transform: rotate(180deg);
+}
+
+
+@media (max-width: 768px) {
+
+  #SECTION_9 {
+    background-color: #ff0000 !important;
+  }
+
+
+  .offices-panel {
+    position: relative;
+    top: unset;
+    right: unset;
+    left: unset;
+    bottom: 20px;
+    margin: 2rem auto 1rem;
+    padding: 0 1.2rem;
+    max-width: 90%;
+    background-color: #ff0000; /* fundo correto para mobile */
+  }
+
+  .panel-title {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+
+  .office-toggle {
+    font-size: 1.1rem;
+  }
+
+  .office-content {
+    font-size: 0.95rem;
+    line-height: 1.45;
+  }
+}
+
+
+
+
+
+
 /* SECTION 10 */
 
 
