@@ -1012,14 +1012,11 @@ SECTION 3 */
 }
 
 
-
-/* SOCIAL BUTTONS */
+/* Base desktop */
 .social-buttons {
   position: absolute;
   top: 27%;
-  /* Just above the "FALE COM NOSSO" text, which is at ~5% from the top */
   left: 70%;
-  /* Align with the starting point of "FALE COM NOSSO" text */
   z-index: 1000;
   display: flex;
   gap: 12px;
@@ -1045,187 +1042,55 @@ SECTION 3 */
   background-color: #f0f0f0;
 }
 
-/* Adjust social buttons for mobile */
-
-
-
-@media (max-width: 347px) {
-  .social-buttons {
-    top: 23% !important;
-    /* Slightly closer to the top on mobile */
-    left: 80% !important;
-    /* Adjust alignment for smaller screens */
-    gap: 4px !important;
-    /* Reduce gap between icons */
-  }
-
-  .social-icon {
-    width: 10px !important;
-    /* Smaller icons on mobile */
-    height: 10px !important;
-    font-size: 10px !important;
-    /* Smaller icon size */
-  }
-}
-
-
-@media (max-width: 410px) {
-  .social-buttons {
-    top: 25%;
-    /* Slightly closer to the top on mobile */
-    left: 60% !important;
-    /* Adjust alignment for smaller screens */
-    gap: 8px;
-    /* Reduce gap between icons */
-  }
-
-  .social-icon {
-    width: 19px !important;
-    /* Smaller icons on mobile */
-    height: 19px !important;
-    font-size: 12px !important;
-    /* Smaller icon size */
-  }
-}
-
-
-@media (max-width: 450px) {
-  .social-buttons {
-    top: 25%;
-    /* Slightly closer to the top on mobile */
-    left: 65% !important;
-    /* Adjust alignment for smaller screens */
-    gap: 8px;
-    /* Reduce gap between icons */
-  }
-
-  .social-icon {
-    width: 19px !important;
-    /* Smaller icons on mobile */
-    height: 19px !important;
-    font-size: 12px !important;
-    /* Smaller icon size */
-  }
-}
-
-
-
-@media (max-width: 510px) {
-  .social-buttons {
-    top: 25%;
-    /* Slightly closer to the top on mobile */
-    left: 65% !important;
-    /* Adjust alignment for smaller screens */
-    gap: 8px;
-    /* Reduce gap between icons */
-  }
-
-  .social-icon {
-    width: 19px !important;
-    /* Smaller icons on mobile */
-    height: 19px !important;
-    font-size: 12px !important;
-    /* Smaller icon size */
-  }
-}
-
-
-@media (max-width: 600px) {
-  .social-buttons {
-    top: 25%;
-    /* Slightly closer to the top on mobile */
-    left: 60% !important;
-    /* Adjust alignment for smaller screens */
-    gap: 8px;
-    /* Reduce gap between icons */
-  }
-
-  .social-icon {
-    width: 21px !important;
-    /* Smaller icons on mobile */
-    height: 21px !important;
-    font-size: 14px !important;
-    /* Smaller icon size */
-  }
-}
-
-@media (max-width: 620px) {
-  .social-buttons {
-    top: 25%;
-    /* Slightly closer to the top on mobile */
-    left: 66% !important;
-    /* Adjust alignment for smaller screens */
-    gap: 8px;
-    /* Reduce gap between icons */
-  }
-
-  .social-icon {
-    width: 25px !important;
-    /* Smaller icons on mobile */
-    height: 25px !important;
-    font-size: 16px !important;
-    /* Smaller icon size */
-  }
-}
-
-
-@media (max-width: 670px) {
-  .social-buttons {
-    top: 25%;
-    /* Slightly closer to the top on mobile */
-    left: 67% !important;
-    /* Adjust alignment for smaller screens */
-    gap: 8px;
-    /* Reduce gap between icons */
-  }
-
-  .social-icon {
-    width: 25px !important;
-    /* Smaller icons on mobile */
-    height: 25px !important;
-    font-size: 16px !important;
-    /* Smaller icon size */
-  }
-}
-
-
-
-@media (max-width: 720px) {
-  .social-buttons {
-    top: 25%;
-    /* Slightly closer to the top on mobile */
-    left: 68% !important;
-    /* Adjust alignment for smaller screens */
-    gap: 8px;
-    /* Reduce gap between icons */
-  }
-
-  .social-icon {
-    width: 25px !important;
-    /* Smaller icons on mobile */
-    height: 25px !important;
-    font-size: 16px !important;
-    /* Smaller icon size */
-  }
-}
-
-
-
+/* MOBILE FIRST: de 768px pra baixo */
 @media (max-width: 768px) {
   .social-buttons {
     top: 25%;
-    /* Slightly closer to the top on mobile */
-    left: 70%;
-    /* Adjust alignment for smaller screens */
+    left: 68%;
     gap: 8px;
-    /* Reduce gap between icons */
   }
 
   .social-icon {
     width: 32px;
-    /* Smaller icons on mobile */
     height: 32px;
     font-size: 16px;
-    /* Smaller icon size */
+  }
+}
+
+@media (max-width: 510px) {
+  .social-buttons {
+    transform: translateX(-5%);
+  }
+
+  .social-icon {
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 410px) {
+  .social-buttons {
+    transform: translateX(-10%);
+  }
+
+  .social-icon {
+    width: 20px;
+    height: 20px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 347px) {
+  .social-buttons {
+    transform: translateX(-12%);
+    gap: 4px;
+  }
+
+  .social-icon {
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    box-shadow: none;
   }
 }
