@@ -1051,19 +1051,19 @@ SECTION 3 */
 
 @media (max-width: 347px) {
   .social-buttons {
-    top: 25%;
+    top: 23% !important;
     /* Slightly closer to the top on mobile */
-    left: 60% !important;
+    left: 80% !important;
     /* Adjust alignment for smaller screens */
-    gap: 8px;
+    gap: 4px !important;
     /* Reduce gap between icons */
   }
 
   .social-icon {
-    width: 15px !important;
+    width: 10px !important;
     /* Smaller icons on mobile */
-    height: 15px !important;
-    font-size: 12px !important;
+    height: 10px !important;
+    font-size: 10px !important;
     /* Smaller icon size */
   }
 }
