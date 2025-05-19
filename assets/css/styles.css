@@ -1071,7 +1071,7 @@ SECTION 3 */
 
 @media (max-width: 410px) {
   .social-buttons {
-    transform: translateX(-10%);
+    transform: translateX(-15%);
   }
 
   .social-icon {
