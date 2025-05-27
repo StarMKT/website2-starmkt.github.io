@@ -639,10 +639,17 @@ SECTION 3 */
 
 
 
-/* ---------- SECTION 4 base ---------- */
+/* ---------- SECTION 4 ---------- */
+
 .section-4 {
   position: relative;
   width: 100%;
+  background-color: #ff0000;
+  overflow: visible; /* importante: permite o crescimento */
+}
+
+.section-4-bottom-spacer {
+  display: none; /* só aparece no mobile */
 }
 
 .section-4-img {
@@ -652,7 +659,6 @@ SECTION 3 */
   image-rendering: auto;
 }
 
-/* ---------- Headline overlay ---------- */
 .headline-wrap {
   position: absolute;
   top: 37%;
@@ -711,6 +717,8 @@ SECTION 3 */
 
 
 
+
+
 /* ---------- Cursor (independent, always visible) ---------- */
 @keyframes blink {
 
@@ -744,9 +752,7 @@ SECTION 3 */
 }
 
 
-
 /* cut-line-global */
-
 
 .cut-line-container {
   width: 100%;
@@ -772,6 +778,20 @@ SECTION 3 */
   opacity: 0;
   transition: width 1.2s ease-out, opacity 0.5s ease-in;
 }
+
+
+
+@media (max-width: 480px) {
+  .section-4-bottom-spacer {
+    display: block;
+    height: 120px; /* ou ajustável */
+    background-color: #ff0000;
+    width: 100%;
+  }
+}
+
+
+
 
 
 
